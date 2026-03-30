@@ -32,8 +32,6 @@ const HeroCarousel = ({ slides }) => {
   return (
     <div 
       className="relative w-full h-screen overflow-hidden bg-black"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <AnimatePresence initial={false} mode="wait">
         <motion.div
@@ -88,35 +86,36 @@ const HeroCarousel = ({ slides }) => {
       </AnimatePresence>
 
       {/* Slide Controls (Arrows & Pagination) */}
-      <div className="absolute bottom-[10%] w-full flex justify-center items-center z-30 gap-6">
-        {/* Left Arrow */}
-        <button 
-          onClick={prevSlide}
-          className="w-8 h-8 md:w-10 md:h-10 border border-white/50 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group"
-        >
-          <ChevronLeft size={18} className="group-hover:-translate-x-0.5 transition-transform" />
-        </button>
-
-        {/* Pagination Dots */}
+      <div 
+        className="absolute bottom-[5%] md:bottom-[8%] w-full flex justify-center items-center z-50 pointer-events-none"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div className="flex items-center gap-3">
+          {/* Pagination Dots */}
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
-              className={`transition-all duration-300 rounded-full bg-white ${
-                currentIndex === idx ? "w-8 h-1" : "w-1.5 h-1.5 opacity-50 hover:opacity-100"
-              }`}
-            />
+              className="relative flex items-center justify-center cursor-pointer pointer-events-auto group py-2 px-1"
+            >
+              <div
+                className={`transition-all duration-300 bg-white relative overflow-hidden ${
+                  currentIndex === idx ? "w-12 md:w-16 h-[2px] rounded-sm" : "w-1.5 h-1.5 rounded-full opacity-50 group-hover:opacity-100"
+                }`}
+              >
+              </div>
+            </button>
           ))}
-        </div>
 
-        {/* Right Arrow */}
-        <button 
-          onClick={nextSlide}
-          className="w-8 h-8 md:w-10 md:h-10 border border-white/50 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group"
-        >
-          <ChevronRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
-        </button>
+          {/* Right Arrow (Single Navigation Button like gacgroup.com) */}
+          <button 
+            onClick={nextSlide}
+            className="ml-4 w-9 h-9 md:w-10 md:h-10 border border-white/40 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group cursor-pointer pointer-events-auto"
+          >
+            <ChevronRight size={18} className="translate-x-[1px] group-hover:translate-x-0.5 transition-transform" />
+          </button>
+        </div>
       </div>
 
     </div>

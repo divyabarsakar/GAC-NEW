@@ -6,11 +6,11 @@ const RndCenter = () => {
       <div className="w-full max-w-[1400px] flex flex-col-reverse lg:flex-row items-center justify-between px-4 lg:px-8">
         
         {/* Left Column: Image */}
-        <div className="w-full lg:w-[55%] mt-10 lg:mt-0 px-4">
+        <div className="w-full lg:w-[55%] mt-10 lg:mt-0 px-4 flex justify-center lg:justify-end">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+            src="https://br-www-resouce-cdn.gacgroup.com/static/Global/tenant/cms/common/202503/17197a44-8c7c-4ee5-b08e-6d3dfc107943.png"
             alt="R&D Center and Production System" 
-            className="w-full h-auto object-cover rounded-sm shadow-sm brightness-95"
+            className="w-full max-w-[800px] h-auto object-contain"
           />
         </div>
 

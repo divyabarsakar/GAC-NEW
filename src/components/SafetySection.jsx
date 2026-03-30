@@ -11,7 +11,7 @@ const SafetySection = () => {
              World-Class Safety Standards
            </h2>
            <p className="text-[#333] font-light text-[15px] leading-[1.8] max-w-lg">
-             GAC models achieve five-star safety ratings under multiple international testing standards, providing all-around protection for every journey.
+             GAC Group has established a high-standard safety R&D system, and its products meet the highest safety standards in the world. Several models have achieved 5-star safety ratings in various authoritative tests such as C-NCAP and Euro NCAP, providing users with comprehensive and reliable safety protection.
            </p>
            <div className="pt-4">
                <button className="px-[40px] py-[10px] text-[13px] text-black border-[0.5px] border-gray-400 hover:bg-black hover:text-white transition-colors duration-300 bg-transparent rounded-none">
@@ -22,9 +22,9 @@ const SafetySection = () => {
 
         {/* Right Column: Safety Image showing NCAP / ANCAP ratings */}
         <div className="w-full lg:w-1/2 relative bg-[#9c9591]">
-          {/* We use the image from the user's localhost screenshot which turned out to be the Safety image */}
+          {/* We use the exact image from the gacgroup.com/en/ site */}
           <img 
-            src={encodeURI("https://br-www-resouce-cdn.gacgroup.com/static/Global/tenant/cms/common/202603/1773715377922-1766040506542-全球站v首页-m.webp")}
+            src="https://br-www-resouce-cdn.gacgroup.com/static/Global/tenant/cms/common/202603/1773715368868-AIONV-pc.webp"
             alt="EURO NCAP and ANCAP Safety Ratings" 
             className="w-full h-full object-cover min-h-[400px] lg:absolute lg:inset-0"
           />

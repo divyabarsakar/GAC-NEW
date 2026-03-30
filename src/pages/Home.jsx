@@ -7,7 +7,6 @@ import HeroCarousel from '../components/HeroCarousel';
 import CorporateSplit from '../components/CorporateSplit';
 import TechInnovation from '../components/TechInnovation';
 import RndCenter from '../components/RndCenter';
-import SafetySection from '../components/SafetySection';
 
 const NewsCard = ({ image, title, link }) => {
   return (
@@ -55,6 +54,12 @@ const Home = () => {
 
   const slides = [
     {
+      title: "S7",
+      subtitle: "Big on Space, Big on Smarts",
+      link: "/suv/s7",
+      bgImage: "https://br-www-resouce-cdn.gacgroup.com/static/Global/tenant/cms/common/202603/1773715232466-s7-pc.webp"
+    },
+    {
       title: "AION V",
       subtitle: "Rugged & Smart SUV",
       link: "/models/aion-v",
@@ -89,7 +94,7 @@ const Home = () => {
   return (
     <div className="w-full h-full relative">
       
-      {/* 1. First Page: Lifestyle Banner (Top) */}
+      {/* 1. First Page: Hero Lifestyle Banner (S7 Video) */}
       <LifestyleBanner />
 
       {/* 2. Second Page: News Cards Section */}
@@ -116,7 +121,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 3. Third Page: Hero Carousel (AION V, S7 Slider) */}
+      {/* 3. Third Page: Hero Carousel (Combined S7 and others) */}
       <HeroCarousel slides={slides} />
 
       {/* 4. Fourth Page: Corporate Split Block (Guangzhou Automobile Group) */}
@@ -127,9 +132,6 @@ const Home = () => {
 
       {/* 6. Sixth Page: R&D Center and Production System */}
       <RndCenter />
-
-      {/* 7. Seventh Page: Safety Ratings Section */}
-      <SafetySection />
 
       {/* Other Supporting Sections */}
       <AppSection />
