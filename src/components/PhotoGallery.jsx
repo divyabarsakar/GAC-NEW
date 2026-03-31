@@ -2,14 +2,14 @@ import React from 'react';
 
 const PhotoGallery = () => {
   return (
-    <section className="bg-black py-24 md:py-32 w-full overflow-hidden snap-start">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+    <section className="bg-black py-16 sm:py-24 md:py-32 w-full overflow-hidden snap-start">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex justify-between items-end mb-12">
            <div>
-             <h2 className="text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
+             <h2 className="text-[26px] sm:text-3xl md:text-5xl font-light tracking-tight text-white mb-4">
                Gallery
              </h2>
-             <p className="text-gray-400 max-w-lg text-sm md:text-base tracking-wide leading-relaxed">
+             <p className="text-gray-400 max-w-lg text-[13px] md:text-base tracking-wide leading-relaxed">
                Crafted for elegance. Engineered for performance. Discover the meticulous design details of the GAC lineup.
              </p>
            </div>

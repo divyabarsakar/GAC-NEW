@@ -15,11 +15,11 @@ const CorporateSplit = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-[45%] flex flex-col justify-center space-y-6 lg:space-y-8 mb-12 lg:mb-0 lg:pr-10 xl:pr-16"
         >
-          <h2 className="text-[28px] md:text-[32px] font-semibold text-[#1a1a1a] tracking-tight leading-snug">
+          <h2 className="text-[26px] sm:text-[28px] md:text-[32px] font-semibold text-[#1a1a1a] tracking-tight leading-snug">
             Guangzhou Automobile Group
           </h2>
           
-          <p className="text-[#555] font-normal text-[15px] md:text-[16px] leading-[1.8] max-w-[450px]">
+          <p className="text-[#555] font-normal text-[14px] sm:text-[15px] md:text-[16px] leading-[1.8] max-w-[450px]">
             Guangzhou Automobile Group Co., Ltd. ("GAC") was incorporated in June 1997. In 2023, GAC' s production and sales both exceeded 2.5 million, with a positive year-on-year growth.
           </p>
           

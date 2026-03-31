@@ -77,7 +77,7 @@ const HeroCarousel = ({ slides }) => {
           <div className="absolute bottom-[20%] md:bottom-[25%] lg:bottom-[30%] w-full flex justify-center z-20 px-6">
             <Link 
               to={slides[currentIndex].link}
-              className="bg-transparent border border-white text-white font-light text-[14px] px-8 md:px-12 py-2 md:py-2.5 hover:bg-white hover:text-black transition-colors duration-300 rounded-full shadow-sm text-center"
+              className="bg-transparent border border-white text-white font-light text-[13px] md:text-[14px] px-8 md:px-12 py-2 md:py-2.5 hover:bg-white hover:text-black transition-colors duration-300 rounded-full shadow-sm text-center"
             >
               Learn More
             </Link>
@@ -87,21 +87,21 @@ const HeroCarousel = ({ slides }) => {
 
       {/* Slide Controls (Arrows & Pagination) */}
       <div 
-        className="absolute bottom-[5%] md:bottom-[8%] w-full flex justify-center items-center z-50 pointer-events-none"
+        className="absolute bottom-[8%] md:bottom-[8%] w-full flex justify-center items-center z-50 pointer-events-none"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           {/* Pagination Dots */}
           {slides.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
-              className="relative flex items-center justify-center cursor-pointer pointer-events-auto group py-2 px-1"
+              className="relative flex items-center justify-center cursor-pointer pointer-events-auto group py-2 md:px-1"
             >
               <div
                 className={`transition-all duration-300 bg-white relative overflow-hidden ${
-                  currentIndex === idx ? "w-12 md:w-16 h-[2px] rounded-sm" : "w-1.5 h-1.5 rounded-full opacity-50 group-hover:opacity-100"
+                  currentIndex === idx ? "w-8 sm:w-12 md:w-16 h-[2px] rounded-sm" : "w-1.5 h-1.5 rounded-full opacity-50 group-hover:opacity-100 mx-1 md:mx-0"
                 }`}
               >
               </div>
@@ -111,9 +111,9 @@ const HeroCarousel = ({ slides }) => {
           {/* Right Arrow (Single Navigation Button like gacgroup.com) */}
           <button 
             onClick={nextSlide}
-            className="ml-4 w-9 h-9 md:w-10 md:h-10 border border-white/40 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group cursor-pointer pointer-events-auto"
+            className="ml-2 md:ml-4 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 border border-white/40 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group cursor-pointer pointer-events-auto shrink-0"
           >
-            <ChevronRight size={18} className="translate-x-[1px] group-hover:translate-x-0.5 transition-transform" />
+            <ChevronRight size={16} className="translate-x-[1px] group-hover:translate-x-0.5 transition-transform md:w-[18px]" />
           </button>
         </div>
       </div>

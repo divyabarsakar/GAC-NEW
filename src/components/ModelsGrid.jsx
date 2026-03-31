@@ -86,13 +86,13 @@ const CarCard = ({ car }) => (
 
 const ModelsGrid = () => {
   return (
-    <section className="bg-gray-50 py-24 px-6 lg:px-12 w-full snap-start">
+    <section className="bg-gray-50 py-16 md:py-24 px-4 sm:px-6 lg:px-12 w-full snap-start">
       <div className="max-w-[1600px] mx-auto">
         <div className="mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-light tracking-tight text-gray-900 mb-4">
+          <h2 className="text-[26px] sm:text-3xl md:text-4xl font-light tracking-tight text-gray-900 mb-4">
             Discover Our Lineup
           </h2>
-          <p className="text-gray-500 max-w-2xl text-sm md:text-base tracking-wide leading-relaxed">
+          <p className="text-gray-500 max-w-2xl text-[13px] md:text-base tracking-wide leading-relaxed">
             Experience the future of mobility with GAC's premium range of intelligent electric and hybrid vehicles designed perfectly for Swiss roads.
           </p>
         </div>
